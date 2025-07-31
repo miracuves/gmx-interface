@@ -10,7 +10,7 @@ import { ReferralTopMenuClickEvent } from "lib/userAnalytics/types";
 
 import ExternalLink from "components/ExternalLink/ExternalLink";
 
-import logoImg from "img/logo_GMX.svg";
+import logoImg from "img/webdon.png";
 
 import { HeaderLink } from "./HeaderLink";
 
@@ -35,7 +35,7 @@ export function AppHeaderLinks({ small, openSettings, clickCloseIcon, showRedire
       {small && (
         <div className="App-header-links-header">
           <Link className="App-header-link-main" to="/">
-            <img src={logoImg} alt="GMX Logo" />
+            <img src={logoImg} alt="Webdon Logo" />
           </Link>
           <div
             className="App-header-menu-icon-block max-w-[450px]:mr-12 mr-8 !border-0"
@@ -90,6 +90,12 @@ export function AppHeaderLinks({ small, openSettings, clickCloseIcon, showRedire
       </div>
 
       <div className="App-header-link-container">
+        <HeaderLink qa="advisor" to="/advisor" showRedirectModal={showRedirectModal}>
+          <Trans>Advisor</Trans>
+        </HeaderLink>
+      </div>
+
+      <div className="App-header-link-container">
         <HeaderLink
           qa="leaderboard"
           to="/leaderboard"
@@ -105,9 +111,9 @@ export function AppHeaderLinks({ small, openSettings, clickCloseIcon, showRedire
         </HeaderLink>
       </div>
       <div className="App-header-link-container">
-        <ExternalLink href="https://docs.gmx.io/">
-          <Trans>Docs</Trans>
-        </ExternalLink>
+        <HeaderLink qa="exchange" to="/exchange" showRedirectModal={showRedirectModal}>
+          <Trans>Exchange</Trans>
+        </HeaderLink>
       </div>
       {small && (
         <div className="App-header-link-container">

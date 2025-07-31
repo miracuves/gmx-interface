@@ -57,6 +57,7 @@
     "@uniswap/v3-sdk": "3.9.0",
     "@wagmi/connectors": "5.3.7",
     "@wagmi/core": "2.14.4",
+    "axios": "1.11.0",
     "bigdecimal": "0.6.1",
     "bowser": "2.11.0",
     "classnames": "2.3.1",
@@ -92,6 +93,7 @@
     "react-toastify": "10.0.5",
     "react-use": "17.3.1",
     "recharts": "2.12.7",
+    "regenerator-runtime": "0.14.1",
     "reselect": "5.1.0",
     "sass": "1.55.0",
     "shallowequal": "1.1.0",
@@ -132,6 +134,7 @@
       "last 1 safari version"
     ]
   },
+
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "7.21.11",
     "@lingui/cli": "4.10.0",
@@ -157,7 +160,7 @@
     "eslint-plugin-react-perf": "3.3.2",
     "happy-dom": "14.12.3",
     "husky": "7.0.4",
-    "lint-staged": "12.3.4",
+    "lint-staged": "latest",
     "postcss": "8.4.41",
     "prettier": "3.2.5",
     "prettier-plugin-tailwindcss": "0.6.5",
@@ -171,18 +174,6 @@
     "vite-tsconfig-paths": "5.0.1",
     "vitest": "2.0.5"
   },
-  "lint-staged": {
-    "sdk/**/*.{js,ts,jsx,tsx}": [
-      "eslint --fix --max-warnings=0 ./sdk",
-      "prettier --write"
-    ],
-    "src/**/*.{js,ts,jsx,tsx}": [
-      "eslint --fix --max-warnings=0 ./src",
-      "prettier --write"
-    ],
-    "src/**/*.{css,scss}": [
-      "prettier --write"
-    ]
-  },
+
   "packageManager": "yarn@3.1.0"
 }

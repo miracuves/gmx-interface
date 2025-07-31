@@ -11,8 +11,8 @@ import { isHomeSite } from "lib/legacy";
 import { HeaderPromoBanner } from "components/HeaderPromoBanner/HeaderPromoBanner";
 import { OneClickPromoBanner } from "components/OneClickPromoBanner/OneClickPromoBanner";
 
-import logoImg from "img/logo_GMX.svg";
-import logoSmallImg from "img/logo_GMX_small.svg";
+import logoImg from "img/webdon.png";
+import logoSmallImg from "img/webdon.png";
 
 import { AppHeaderLinks } from "./AppHeaderLinks";
 import { AppHeaderUser } from "./AppHeaderUser";
@@ -107,8 +107,8 @@ export function Header({ disconnectAccountAndCloseSettings, openSettings, showRe
           <div className="App-header large">
             <div className="App-header-container-left">
               <Link className="App-header-link-main" to="/">
-                <img src={logoImg} className="big" alt="GMX Logo" />
-                <img src={logoSmallImg} className="small" alt="GMX Logo" />
+                <img src={logoImg} className="big" alt="Webdon Logo" />
+                <img src={logoSmallImg} className="small" alt="Webdon Logo" />
               </Link>
               {isHomeSite() ? (
                 <HomeHeaderLinks showRedirectModal={showRedirectModal} />
@@ -140,8 +140,8 @@ export function Header({ disconnectAccountAndCloseSettings, openSettings, showRe
             >
               <div className="App-header-container-left">
                 <div className="App-header-link-main clickable" onClick={toggleDrawer}>
-                  <img src={logoImg} className="big" alt="GMX Logo" />
-                  <img src={logoSmallImg} className="small" alt="GMX Logo" />
+                  <img src={logoImg} className="big" alt="Webdon Logo" />
+                  <img src={logoSmallImg} className="small" alt="Webdon Logo" />
                 </div>
               </div>
               <div className="App-header-container-right">

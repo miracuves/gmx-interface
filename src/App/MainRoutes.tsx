@@ -25,7 +25,7 @@ import ClaimEsGmx from "pages/ClaimEsGmx/ClaimEsGmx";
 import CompleteAccountTransfer from "pages/CompleteAccountTransfer/CompleteAccountTransfer";
 import DashboardV2 from "pages/Dashboard/DashboardV2";
 import Ecosystem from "pages/Ecosystem/Ecosystem";
-import { Exchange } from "pages/Exchange/Exchange";
+import ExchangePage from "pages/Exchange/Exchange";
 import Jobs from "pages/Jobs/Jobs";
 import { CompetitionRedirect, LeaderboardPage } from "pages/LeaderboardPage/LeaderboardPage";
 import NftWallet from "pages/NftWallet/NftWallet";
@@ -43,6 +43,14 @@ import Stats from "pages/Stats/Stats";
 import { SyntheticsPage } from "pages/SyntheticsPage/SyntheticsPage";
 import { SyntheticsStats } from "pages/SyntheticsStats/SyntheticsStats";
 import { TestPermits } from "pages/TestPermits/TestPermits";
+import { AdvisorDashboard } from "pages/AdvisorDashboard/AdvisorDashboard";
+import { AdvisorOverviewDetail } from "pages/AdvisorDashboard/AdvisorOverviewDetail";
+import { AdvisorStatsDetail } from "pages/AdvisorDashboard/AdvisorStatsDetail";
+import { LinkedAccountsDetail } from "pages/AdvisorDashboard/LinkedAccountsDetail";
+import { RecentActivityDetail } from "pages/AdvisorDashboard/RecentActivityDetail";
+import { UserTradingDashboard } from "pages/AdvisorDashboard/UserTradingDashboard";
+import { UserDashboard } from "pages/AdvisorDashboard/UserDashboard";
+import { UserAdvisorLink } from "pages/UserAdvisorLink/UserAdvisorLink";
 import { abis } from "sdk/abis";
 
 const LazyUiPage = lazy(() => import("pages/UiPage/UiPage"));
@@ -100,7 +108,7 @@ export function MainRoutes({ openSettings }: { openSettings: () => void }) {
         <PriceImpactRebatesStatsPage />
       </Route>
       <Route exact path="/v1/:tradeType?">
-        <Exchange ref={exchangeRef} openSettings={openSettings} />
+        <SyntheticsPage openSettings={openSettings} />
       </Route>
       <Route exact path="/stats">
         <SyntheticsStateContextProvider skipLocalReferralCode={false} pageType="stats">
@@ -159,6 +167,9 @@ export function MainRoutes({ openSettings }: { openSettings: () => void }) {
       <Route exact path="/ecosystem">
         <Ecosystem />
       </Route>
+      <Route exact path="/exchange">
+        <ExchangePage />
+      </Route>
       <Route path="/leaderboard/">
         <SyntheticsStateContextProvider skipLocalReferralCode pageType="leaderboard">
           <LeaderboardPage />
@@ -208,6 +219,33 @@ export function MainRoutes({ openSettings }: { openSettings: () => void }) {
 
       <Route exact path="/referrals-tier">
         <ReferralsTier />
+      </Route>
+      <Route exact path="/advisor">
+        <AdvisorDashboard />
+      </Route>
+      <Route exact path="/advisor/:advisorAddress">
+        <AdvisorDashboard />
+      </Route>
+      <Route exact path="/advisor/:advisorAddress/overview">
+        <AdvisorOverviewDetail />
+      </Route>
+      <Route exact path="/advisor/:advisorAddress/stats">
+        <AdvisorStatsDetail />
+      </Route>
+      <Route exact path="/advisor/:advisorAddress/accounts">
+        <LinkedAccountsDetail />
+      </Route>
+      <Route exact path="/advisor/:advisorAddress/activity">
+        <RecentActivityDetail />
+      </Route>
+      <Route exact path="/advisor/:advisorAddress/trade/:userId">
+        <UserTradingDashboard />
+      </Route>
+      <Route exact path="/advisor/:advisorAddress/user/:userId">
+        <UserDashboard />
+      </Route>
+      <Route exact path="/link-advisor/:advisorAddress">
+        <UserAdvisorLink />
       </Route>
       <Route exact path="/monitor">
         <Stats />

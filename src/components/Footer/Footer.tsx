@@ -11,7 +11,7 @@ import { LandingPageFooterMenuEvent } from "lib/userAnalytics/types";
 import ExternalLink from "components/ExternalLink/ExternalLink";
 import { TrackingLink } from "components/TrackingLink/TrackingLink";
 
-import logoImg from "img/logo_GMX.svg";
+import logoImg from "img/webdon.png";
 
 import { SOCIAL_LINKS, getFooterLinks } from "./constants";
 import { UserFeedbackModal } from "../UserFeedbackModal/UserFeedbackModal";
@@ -52,7 +52,7 @@ export default function Footer({ showRedirectModal, redirectPopupTimestamp, isMo
             "justify-start": !isMobile,
           })}
         >
-          <img src={logoImg} alt="GMX Logo" />
+          <img src={logoImg} alt="Webdon Logo" className="h-32 w-auto" />
         </div>
         <div
           className={cx("flex flex-row items-center justify-center", {
